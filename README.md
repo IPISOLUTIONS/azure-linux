@@ -255,7 +255,7 @@ This section starts with a blog entry containing a series of videos on [Video: A
 	- [How to use docker with swarm on Azure](https://azure.microsoft.com/documentation/virtual-machines-docker-swarm)
 	- [Get Started with Docker and Compose on Azure](https://azure.microsoft.com/documentation/virtual-machines-docker-compose-quickstart)
 
-2. [Fleet with CoreOS](virtual-machines-linux-coreos-how-to.md)
+2. [Fleet with CoreOS](https://azure.microsoft.com/documentation/virtual-machines-linux-coreos-how-to)
 3. Deis
 	- [GitHub repo: Installing Deis on a CoreOS cluster on Azure](https://github.com/chanezon/azure-linux/tree/master/coreos/deis)
 4. Kubernetes
