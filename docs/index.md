@@ -9,10 +9,15 @@ General Notes
 The sections are broken down on the right of this page. (Links may occur in more than one section, as topics can be about more than one concept, distro, or technology.) In addition, there are several topics that describe various Linux options, image repositories, case studies, and how-to topics to upload your own custom images:
 
 -	[Azure Marketplace](http://azure.microsoft.com/marketplace/virtual-machines/)
+
 -	[MSOpenTech VM Depot](https://vmdepot.msopentech.com/List/Index)
+
 -	[Events and Demonstrations: Microsoft Openness CEE](http://www.opennessatcee.com/)
+
 -	[How to: Uploading your own Distro Image](https://azure.microsoft.com/documentation/virtual-machines-linux-create-upload-vhd) (and also instructions using an [Azure-Endorsed Distribution](https://azure.microsoft.com/documentation/virtual-machines-linux-endorsed-distributions)\)
+
 -	[Notes: General Linux Requirements to Run in Azure](https://azure.microsoft.com/documentation/virtual-machines-linux-create-upload-vhd-generic)
+
 -	[Notes: General Introduction for Linux on Azure](https://azure.microsoft.com/documentation/virtual-machines-linux-introduction)
 
 <!--
@@ -25,53 +30,6 @@ The sections are broken down on the right of this page. (Links may occur in more
 - [Devops, Management, and Optimization](#devops) &mdash; A big category, changing rapidly.
 - [Support, Troubleshooting, and "It Just Doesn't Work"](#supportdebug) &mdash; Really.
 -->
-
-Community Images and Repositories
----------------------------------
-
-1.	[MSOpenTech VM Depot](https://vmdepot.msopentech.com/List/Index) &mdash; for community provided virtual machine images.
-2.	[GitHub](https://github.com/Azure/) &mdash; for the Azure CLI, and many other tools and projects.
-3.	[Docker Hub Registry](https://registry.hub.docker.com/) &mdash; the registry for Docker container images.
-
-Languages and Platforms
------------------------
-
-### [Azure Java Dev Center](http://azure.microsoft.com/develop/java/)
-
-1.	[Images](https://vmdepot.msopentech.com/List/Index?sort=Featured&search=java)
-2.	[How to: Use Service Bus from Java with AMQP 1.0](http://msdn.microsoft.com/library/azure/jj841073.aspx)
-3.	[How to: Set up Tomcat7 on Linux Using the Azure Portal](https://azure.microsoft.com/documentation/virtual-machines-linux-setup-tomcat7-linux)
-4.	[Video: Azure Java SDK for Service Management](http://channel9.msdn.com/Shows/Cloud+Cover/Episode-157-The-Java-SDK-for-Azure-Management-with-Brady-Gaster)
-5.	[Blog: Getting Started with Azure Management Libraries for Java](http://azure.microsoft.com/blog/2014/09/15/getting-started-with-the-azure-java-management-libraries/)
-6.	[GitHub repo: Azure Toolkit for Eclipse with Java](https://github.com/MSOpenTech/WindowsAzureToolkitForEclipseWithJava)
-7.	[Reference: Azure Toolkit for Eclipse with Java](http://msdn.microsoft.com/library/azure/hh694271.aspx)
-8.	[GitHub repo: MS Open Tech Tools plugin for IntelliJ IDEA and Android Studio](https://github.com/MSOpenTech/msopentech-tools-for-intellij)
-9.	[Blog: MSOpenTech Contributes to the OpenJDK](http://msopentech.com/blog/2014/10/21/ms-open-techs-first-contribution-openjdk/)
-10.	[Images: WebSphere](http://azure.microsoft.com/marketplace/partners/msopentech/was-8-5-was-8-5-5-3/)
-11.	[Images: WebLogic](http://azure.microsoft.com/marketplace/?term=weblogic)
-12.	[Images: JDK6 on Windows](http://azure.microsoft.com/marketplace/partners/msopentech/jdk6onwindowsserver2012/)
-13.	[Images: JDK7 on Windows](http://azure.microsoft.com/marketplace/partners/msopentech/jdk7onwindowsserver2012/)
-14.	[Images: JDK8 on Windows](http://azure.microsoft.com/marketplace/partners/msopentech/jdk8onwindowsserver2012r2/)
-
-### JVM Languages
-
-1.	[Scala: Running Play Framework Applications in Azure Cloud Services](http://msopentech.com/blog/2014/09/25/tutorial-running-play-framework-applications-microsoft-azure-cloud-services-2/)
-
-### SDK Types, Installations, Upgrades
-
-1.	[Azure Service Management SDK: Java](http://dl.windowsazure.com/javadoc/)
-2.	[Azure Service Management SDK: Go](https://github.com/MSOpenTech/azure-sdk-for-go)
-3.	[Azure Service Management SDK: Ruby](https://github.com/MSOpenTech/azure-sdk-for-ruby)
-	-	[How to: Install Ruby on Rails](https://azure.microsoft.com/documentation/virtual-machines-ruby-rails-web-app-linux)
-	-	[How to: Install Ruby on Rails with Capistrano, Nginx, Unicorn, and PostgreSQL](https://azure.microsoft.com/documentation/virtual-machines-ruby-deploy-capistrano-host-nginx-unicorn)
-4.	[Azure Service Management SDK: Python](https://github.com/Azure/azure-sdk-for-python)
-	-	[How to: Django Hello World Web Application (Mac-Linux)](https://azure.microsoft.com/documentation/virtual-machines-python-django-web-app-linux)
-5.	[Azure Service Management SDK: Node.js](https://github.com/MSOpenTech/azure-sdk-for-node)
-6.	[Azure Service Management SDK: PHP](https://github.com/MSOpenTech/azure-sdk-for-php)
-	-	[How to: Install the LAMP Stack on an Azure VM](https://azure.microsoft.com/documentation/virtual-machines-linux-install-lamp-stack)
-	-	[Video: Install a LAMP Stack on an Azure VM](http://channel9.msdn.com/Shows/Azure-Friday/LAMP-stack-on-Azure-VMs-with-Guy-Bowerman)
-7.	[Azure Service Management SDK: .NET](https://github.com/Azure/azure-sdk-for-net)
-8.	[Blog: Mono, ASP.NET 5, Linux, and Docker](http://blogs.msdn.com/b/webdev/archive/2015/01/14/running-asp-net-5-applications-in-linux-containers-with-docker.aspx)
 
 Samples and Scripts
 -------------------

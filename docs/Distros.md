@@ -64,3 +64,14 @@ CoreOS is a small, optimized distro for pure compute scale with a high degree of
 4.	[Blog: Deploying a Customized FreeBSD Image](http://msopentech.com/blog/2014/05/14/deploy-customize-freebsd-virtual-machine-image-microsoft-azure/)
 5.	[How to: Install the Azure Linux Agent](https://azure.microsoft.com/documentation/virtual-machines-linux-agent-user-guide)
 6.	[Marketplace: Kaspersky AV for Linux File Server](http://azure.microsoft.com/marketplace/partners/kaspersky-lab/kav-for-lfs-kav-for-lfs/)
+
+Community images
+----------------
+
+Community images are Linux images pre-configured for specific purposes, that can be used to create Azure Virtual Machines. For example, you might find a version of Ubuntu with the LAMP or MEAN stack already installed.
+
+The Docker Hub Repository serves a similar purpose, just for Docker images.
+
+-	[MSOpenTech VM Depot](https://vmdepot.msopentech.com/List/Index) &mdash; for community provided virtual machine images.
+
+-	[Docker Hub Registry](https://registry.hub.docker.com/) &mdash; the registry for Docker container images.
