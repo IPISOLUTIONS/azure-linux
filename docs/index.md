@@ -1,163 +1,62 @@
-Linux and Open-Source Computing on Azure
-========================================
+<properties
+   pageTitle="What is Microsoft Azure?"
+   description="Describes services related to infrastructure for Azure Compute."
+   services="virtual-machines"
+   documentationCenter="virtual-machines"
+   authors="rickstercdn"
+   manager="madhana"
+   editor=""/>
 
-This document attempts to list in one place all the topics written by Microsoft and its partners about running Linux-based Virtual Machines as well as other open-source compute environments and applications on Microsoft Azure. As both Azure and the open-source computing world are fast-moving targets, it is almost certain that this document is out of date, *despite* the fact that we shall do our best to continually add newer topics and remove out-of-date ones. If we've missed one, please let us know in the comments, or submit a pull request to our [GitHub repo](https://github.com/Azure/azure-content/).
+<tags
+   ms.service="virtual-machines"
+   ms.devlang="NA"
+   ms.topic="article"
+   ms.tgt_pltfrm="vm-linux"
+   ms.workload="infrastructure"
+   ms.date="02/01/2016"
+   ms.author="rickstercdn"/>
 
-General Notes
--------------
+# What is Microsoft Azure
+Microsoft Azure is a growing collection of integrated public cloud services including analytics, Virtual Machines, databases, mobile, networking, storage, and web — ideal for hosting your solutions.  Microsoft Azure provides a scalable computing platform that allows you to only pay for what you use, when you want it - without having to invest in on premises hardware.  Azure is ready when you are to scale your solutions up and out to whatever scale you require to service the needs of your clients.
+ 
+## Azure Virtual Machines
+Azure virtual machines allow you deploy a wide range of computing solutions in an agile way. Deploy a Windows or Linux virtual machine from the image gallery or a custom created one from any one of our growing list of partners.  You can deploy virtually any workload and any language on nearly any operating system. Still don't see what you are looking for?  Don't worry - you can also bring your own images from on-premises. 
+ 
+## Getting Started with Linux in Microsoft Azure
 
-The sections are broken down on the right of this page. (Links may occur in more than one section, as topics can be about more than one concept, distro, or technology.) In addition, there are several topics that describe various Linux options, image repositories, case studies, and how-to topics to upload your own custom images:
+Use Microsoft Azure Virtual Machines, Storage, and Networking together to provide "infrastructure-as-a-service" at Internet scale for your Linux computing needs. To get started using Linux on Azure, you're going to need:
 
--	[Azure Marketplace](http://azure.microsoft.com/marketplace/virtual-machines/)
+1. A free trial account. **[Go get one.](https://azure.microsoft.com/pricing/free-trial/)**
+2. The Azure Command-line Interface for Linux, Mac, and Windows (the Azure CLI). **[Install it.](../../xplat-cli-install.md)**
+3. Know how to create your Linux VM. **[Create it](../virtual-machines-linux-tutorial.md)**.
+4. More information about Linux and Azure, including how to qualify for the Service Level Agreement (SLA). **Read this document**.
 
--	[MSOpenTech VM Depot](https://vmdepot.msopentech.com/List/Index)
+## Logistics: Regions, Distributions, Availability, VM Sizes and Quotas
+### Regions
+Microsoft Azure resources are distributed across multiple geographical regions around the world.  A "region" represents multiple data centers in a single geographical area.  As of January 1, 2016, this includes: 8 in America, 2 in Europe, 6 in Asia Pacific, 2 in mainland China and 3 in India.  If you want a complete list of all Azure regions, we maintain a list of existing and newly announced regions **[here](https://azure.microsoft.com/regions/)**.  
 
--	[Events and Demonstrations: Microsoft Openness CEE](http://www.opennessatcee.com/)
+### Distributions
+Microsoft Azure supports running a number of popular Linux distributions provided and maintained by a number of partners.  You will find distributions such as CentOS, Debian, Red Hat Enterprise, Ubuntu, FreeBSD and more in the Azure Marketplace. We actively work with various Linux communities to add even more flavors to the Endorsed Distribution list. **[Check out Current Distros](../../virtual-machines-linux-endorsed-distributions.md)** 
+If your preferred Linux distro of choice is not currently present in the gallery, you can "Bring your own Linux" VM by following the guidelines **[on this page.](../../virtual-machines-linux-create-upload-vhd.md)**
 
--	[How to: Uploading your own Distro Image](https://azure.microsoft.com/documentation/virtual-machines-linux-create-upload-vhd) (and also instructions using an [Azure-Endorsed Distribution](https://azure.microsoft.com/documentation/virtual-machines-linux-endorsed-distributions)\)
+## Availability and the Microsoft Azure SLA
+In order for your deployment to qualify for our 99.95 VM Service Level Agreement, you need to deploy two or more VMs running your workload inside of an availability set. This will ensure your VMs are distributed across multiple fault domains in our data centers as well as deployed onto hosts with different maintenance windows. For full details of our SLA you can view it **[online here](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/)**.  
 
--	[Notes: General Linux Requirements to Run in Azure](https://azure.microsoft.com/documentation/virtual-machines-linux-create-upload-vhd-generic)
+## VM Sizes and Quotas
+When you deploy a VM in Azure, you will select a VM size within one of our series of sizes that is suitable to your workload. The size also affects the processing power, memory and storage capacity of the virtual machine. You are billed based on the amount of time the VM is running and consuming its allocated resources. For a more complete list, see the following article on **[Sizes of Virtual Machines](../../virtual-machines-size-specs.md)**.
 
--	[Notes: General Introduction for Linux on Azure](https://azure.microsoft.com/documentation/virtual-machines-linux-introduction)
+Here are some basic guidelines for selecting a VM size from one of our series (A, D, DS, G and GS).
 
-<!--
-- [Distros](#distros) &mdash; Topics to do with a specific distro.
-- [The Basics](#basics) &mdash; A lot of the basic things to do that you either know or need to know.
-- [Community Images and Repositories](#images) &mdash; Other places for very useful information, repositories, and binaries.
-- [Languages and Platforms](#langsandplats)
-- [Samples and Scripts](#samples)
-- [Auth and Encryption](#security) &mdash; Important security-related topics, not necessarily specific to Azure.
-- [Devops, Management, and Optimization](#devops) &mdash; A big category, changing rapidly.
-- [Support, Troubleshooting, and "It Just Doesn't Work"](#supportdebug) &mdash; Really.
--->
+* A-series VMs are our value priced entry-level VMs for light workloads and Dev/Test scenarios. They are widely available in all regions and can connect and use all standard resources available to virtual machines.
+* A-series sizes (A8 - A11) are special compute intensive configurations suitable for high-performance computing cluster applications.
+* D-series VMs are designed to run applications that demand higher compute power and temporary disk performance. D-series VMs provide faster processors, a higher memory-to-core ratio, and a solid-state drive (SSD) for the temporary disk. 
+* Dv2-series, is the latest version of our D-series, features a more powerful CPU. The Dv2-series CPU is about 35% faster than the D-series CPU. It is based on the latest generation 2.4 GHz Intel Xeon® E5-2673 v3 (Haswell) processor, and with the Intel Turbo Boost Technology 2.0, can go up to 3.2 GHz. The Dv2-series has the same memory and disk configurations as the D-series.
+* G-series VMs offer the most memory and run on hosts that have Intel Xeon E5 V3 family processors.
 
-Samples and Scripts
--------------------
+Note: DS-series and GS-series VMs have access to Premium Storage - our SSD backed high-performance, low-latency storage for I/O intensive workloads. Premium Storage is available in certain regions. For details, see **[Premium Storage: High-performance storage for Azure virtual machine workloads](../../storage-premium-storage-preview-portal.md)**.
 
-Look for this section to fill up quickly. If you have suggestions, send us a PR or leave them in comments, below.
+Each Azure Subscription has default quota limits in place that could impact the deployment of a large number of VMs for your project. The current limit on a per subscription basis is 20 VMs per region.  This quota limits can be raised by filing a support ticket requesting a limit increase.  For more details on quota limits, please see **[Azure Subscription Service Limits](../../azure-subscription-service-limits/)**
 
-1.	[Create a multi-VM deployment using the Azure CLI](https://azure.microsoft.com/documentation/virtual-machines-create-multi-vm-deployment-xplat-cli)
-2.	[Patrick Chanezon's Azure Linux GitHub repository](https://github.com/chanezon/azure-linux)
-3.	[Video: How to Move On-Premises USB data on Linux to Azure using **usbip**](http://channel9.msdn.com/Blogs/Open/On-premises-USB-devices-on-Linux-on-Azure-via-usbip)
-4.	[Video: Accessing Linux-based GUI on Azure in the Browser with fernapp](http://channel9.msdn.com/Blogs/Open/Accessing-Linux-based-GUI-on-Azure-over-browser-with-fernapp)
-5.	[Video: Shared Storage on Linux Using Azure Files Preview -- Part 1](http://channel9.msdn.com/Blogs/Open/Shared-storage-on-Linux-via-Azure-Files-Preview-Part-1)
-6.	[Video: Embracing Linux Devices on Azure using Service Bus and Web Sites](http://channel9.msdn.com/Blogs/Open/Embracing-Linux-devices-on-Azure-via-Service-Bus-and-Web-Sites)
-7.	[Video: Connecting a Native Linux-based memcached application to Azure](http://channel9.msdn.com/Blogs/Open/Connecting-a-Linux-based-native-memcache-application-to-Windows-Azure)
-8.	[Video: Load Balancing Highly Available Linux Services on Azure: OpenLDAP and MySQL](http://channel9.msdn.com/Blogs/Open/Load-balancing-highly-available-Linux-services-on-Windows-Azure-OpenLDAP-and-MySQL)
+## Next steps
 
-Data
-----
-
-This section contains information about several different storage approaches and technologies, including NoSQL, Relational, and Big Data.
-
-### NoSQL
-
-1.	[Blog: 8 Open-source NoSql Databases for Azure](http://openness.microsoft.com/blog/2014/11/03/open-source-nosql-databases-microsoft-azure/)
-2.	Couchdb
-	-	[Slideshare (MSOpenTech): Experiences with CouchDb on Azure](http://www.slideshare.net/brianbenz/experiences-using-couchdb-inside-microsofts-azure-team)
-	-	[Blog: Running CouchDB-as-a-Service with node.js, CORS, and Grunt](http://msopentech.com/blog/2013/12/19/tutorial-building-multi-tier-windows-azure-web-application-use-cloudants-couchdb-service-node-js-cors-grunt-2/)
-3.	MongoDB
-	-	[How to: Create a Node.js Application on Azure with MongoDB using the MongoLab Add-On](https://azure.microsoft.com/documentation/store-mongolab-web-sites-nodejs-store-data-mongodb)
-4.	Cassandra
-	-	[How to: Running Cassandra with Linux on Azure and Accessing it from Node.js](https://azure.microsoft.com/documentation/virtual-machines-linux-nodejs-running-cassandra)
-5.	Redis
-	-	[Blog: Redis on Windows in the Azure Redis Cache Service](http://msopentech.com/blog/2014/05/12/redis-on-windows/)
-	-	[Blog: Announcing ASP.NET Session State Provider for Redis Preview Release](http://blogs.msdn.com/b/webdev/archive/2014/05/12/announcing-asp-net-session-state-provider-for-redis-preview-release.aspx)
-6.	RavenHQ
-	-	[Blog: RavenHQ Now Available in the Azure Marketplace](http://azure.microsoft.com/blog/2014/08/12/ravenhq-now-available-in-the-azure-store/)
-
-### Big Data
-
-1.	Hadoop/Cloudera
-
-	-	[Blog: Installing Hadoop on Azure Linux VMs](http://blogs.msdn.com/b/benjguin/archive/2013/04/05/how-to-install-hadoop-on-windows-azure-linux-virtual-machines.aspx)
-	-	[How to: Get Started with Hadoop and Hive using HDInsight](https://azure.microsoft.com/documentation/hdinsight-get-started)  
-
-2.	[Azure HDInsight](http://azure.microsoft.com/services/hdinsight/) -- a fully managed Hadoop service on Azure.
-
-### Relational Database
-
-1.	MySQL
-	-	[How to: Install and Run MySQL](https://azure.microsoft.com/documentation/virtual-machines-linux-mysql-use-opensuse)
-	-	[How to: Optimize Performance of MySQL on Azure](https://azure.microsoft.com/documentation/virtual-machines-linux-optimize-mysql-perf)
-	-	[How to: MySQL Clusters](https://azure.microsoft.com/documentation/virtual-machines-linux-mysql-cluster)
-	-	[How to: Create a MySQL Database using the Marketplace](https://azure.microsoft.com/documentation/store-php-create-mysql-database)
-	-	[How to: Django and MySQL on Azure Websites with Python and Visual Studio](https://azure.microsoft.com/documentation/web-sites-python-ptvs-django-mysql)
-	-	[How to: PHP and MySQL on Azure Websites with WebMatrix](https://azure.microsoft.com/documentation/web-sites-php-mysql-use-webmatrix)
-	-	[MySQL High Availability Architecture in Microsoft Azure](http://download.microsoft.com/download/6/1/C/61C0E37C-F252-4B33-9557-42B90BA3E472/MySQL_HADR_solution_in_Azure.pdf)
-2.	MariaDB
-	-	[How to: Create a Multi-Master cluster of MariaDbs](https://azure.microsoft.com/documentation/virtual-machines-mariadb-cluster)
-3.	PostgreSQL
-	-	[How to: Install Ruby on Rails with Capistrano, Nginx, Unicorn, and PostgreSQL](https://azure.microsoft.com/documentation/virtual-machines-ruby-deploy-capistrano-host-nginx-unicorn)
-4.	[Installing Postgres with corosync, pg_bouncer using ILB](https://github.com/chgeuer/postgres-azure)
-
-Auth and Encryption
--------------------
-
-Authentication and encryption are critical topics in software development, and there are many, many topics on the web that describe how to learn and use proper security techniques for both. We describe some of the basic usage to get up and running quickly with Linux and opensource workloads, as well pointing to tools to use to reset or remove remote security features on Azure. These are basic procedures, and we will be adding more complex scenarios soon.
-
-1.	[The Basics: Certificate Use and Management](http://msdn.microsoft.com/library/azure/gg981929.aspx)
-2.	[The Basics: SSH](https://azure.microsoft.com/documentation/virtual-machines-linux-use-ssh-key)
-3.	[The Basics: How to Reset a Password or SSH Properties for Linux](https://azure.microsoft.com/documentation/virtual-machines-linux-use-vmaccess-reset-password-or-ssh)
-4.	[The Basics: Using Root](https://azure.microsoft.com/documentation/virtual-machines-linux-use-root-privileges)
-
-Devops, Management, and Optimization
-------------------------------------
-
-This section starts with a blog entry containing a series of videos on [Video: Azure Virtual Machines : Using Chef, Puppet and Docker for managing Linux VMs](http://azure.microsoft.com/blog/2014/12/15/azure-virtual-machines-using-chef-puppet-and-docker-for-managing-linux-vms/). However, the world of devops, management, and optimization is quite expansive and changing very quickly, so you should consider the list below a starting point.
-
-1.	Docker
-
-	-	[Docker VM Extension for Linux on Azure](https://azure.microsoft.com/documentation/virtual-machines-docker-vm-extension)
-	-	[Using the Docker VM Extension from the Azure Command-line Interface (Azure CLI)](https://azure.microsoft.com/documentation/virtual-machines-docker-with-xplat-cli)
-	-	[Using the Docker VM Extension from the Azure Preview Portal](https://azure.microsoft.com/documentation/virtual-machines-docker-with-portal)
-	-	[Getting Started Quickly with Docker in the Azure Marketplace](https://azure.microsoft.com/documentation/virtual-machines-docker-ubuntu-quickstart)
-	-	[How to use docker-machine on Azure](https://azure.microsoft.com/documentation/virtual-machines-docker-machine)
-	-	[How to use docker with swarm on Azure](https://azure.microsoft.com/documentation/virtual-machines-docker-swarm)
-	-	[Get Started with Docker and Compose on Azure](https://azure.microsoft.com/documentation/virtual-machines-docker-compose-quickstart)
-
-2.	[Fleet with CoreOS](https://azure.microsoft.com/documentation/virtual-machines-linux-coreos-how-to)
-
-3.	Deis
-
-	-	[GitHub repo: Installing Deis on a CoreOS cluster on Azure](https://github.com/chanezon/azure-linux/tree/master/coreos/deis)
-
-4.	Kubernetes
-
-	-	[Complete guide to automated Kubernetes cluster deployment with CoreOS and Weave](https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/getting-started-guides/coreos/azure/README.md#kubernetes-on-azure-with-coreos-and-weave)
-	-	[Kubernetes Visualizer](http://azure.microsoft.com/blog/2014/08/28/hackathon-with-kubernetes-on-azure)
-
-5.	Jenkins and Hudson
-
-	-	[Blog: Jenkins Slave Plug-in for Azure](http://msopentech.com/blog/2014/09/23/announcing-jenkins-slave-plugin-azure/)
-	-	[GitHub repo: Jenkins Storage Plug-in for Azure](https://github.com/jenkinsci/windows-azure-storage-plugin)
-	-	[Third Party: Hudson Slave Plug-in for Azure](http://wiki.hudson-ci.org/display/HUDSON/Azure+Slave+Plugin)
-	-	[Third Party: Hudson Storage Plug-in for Azure](https://github.com/hudson3-plugins/windows-azure-storage-plugin)
-
-6.	Chef
-
-	-	[Chef and Virtual Machines](https://azure.microsoft.com/documentation/virtual-machines-windows-install-chef-client)
-	-	[Video: What is Chef and How does it Work?](https://msopentech.com/blog/2014/03/31/using-chef-to-manage-azure-resources/)
-
-7.	Azure Automation
-
-	-	[Video: How to Use Azure Automation with Linux VMs](http://channel9.msdn.com/Shows/Azure-Friday/Azure-Automation-104-managing-Linux-and-creating-Modules-with-Joe-Levy)
-
-8.	Powershell DSC for Linux
-
-	-	[Blog: How to do Powershell DSC for Linux](http://blogs.technet.com/b/privatecloud/archive/2014/05/19/powershell-dsc-for-linux-step-by-step.aspx)
-	-	[GitHub: Docker Client DSC](https://github.com/anweiss/DockerClientDSC)
-
-9.	[Ubuntu Juju](https://juju.ubuntu.com/docs/config-azure.html)
-
-10.	[Packer plugin for Azure](https://github.com/msopentech/packer-azure)
-
-Support, Troubleshooting, and "It Just Doesn't Work"
-----------------------------------------------------
-
-1.	Microsoft support documentation
-	-	[Support: Support for Linux Images on Microsoft Azure](http://support2.microsoft.com/kb/2941892)
-
-<!--Anchors-->
-
-<!--Link references--In actual articles, you only need a single period before the slash. -->
+A free trial account. **[Go get one.](https://azure.microsoft.com/pricing/free-trial/)** If you already have one, to try it out, **[install the Azure CLI.](../../xplat-cli-install.md)**. If you've done that, then [go create your Linux VM now.](../virtual-machines-linux-tutorial.md).
