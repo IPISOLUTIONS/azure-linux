@@ -1,1 +1,4 @@
 site_name: Linux and OSS Computing on Azure
+pages:
+- Linux on Azure: index.md
+- Getting Started with Linux on Azure: create-a-linux-vm-from-the-cli.md 
