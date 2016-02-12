@@ -1,4 +1,5 @@
 site_name: Linux and OSS Computing on Azure
+theme: bootstrap
 pages:
 - Linux on Azure: index.md
 - Getting Started with Linux on Azure: create-a-linux-vm-from-the-cli.md 
